@@ -9,7 +9,7 @@
   text-align: center;
   background-color: lightgray;
   margin-top:20px;
-  height:12%;
+  height:100px;
   width:100%;
   position:fixed;
   display: inline-block;
@@ -29,7 +29,7 @@
   font-style:italic;
   text-align: center;
   font-family: Times;
-  height:17%;
+  height:20%;
   font-size: 25px;
   border-radius: 10px;
   display: inline-block;
