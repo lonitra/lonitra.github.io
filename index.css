@@ -183,3 +183,8 @@ table {
   margin-left:50px;
   width:100%;
 }
+
+footer {
+  font-size:11px;
+  margin-left:-150px;
+}
