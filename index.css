@@ -1,0 +1,183 @@
+
+
+#wrapper {
+  margin-left: 150px;
+  width:960px;
+}
+
+.topnav {
+  text-align: center;
+  background-color: lightgray;
+  margin-top:20px;
+  height:12%;
+  width:100%;
+  position:fixed;
+  display: inline-block;
+  opacity: 0.8;
+  max-width:100%;
+  min-width:1000px;
+}
+
+.tab:hover {
+  background-color:white;
+  border-radius: 0px;
+  padding: 10px 5px;
+}
+
+#nav {
+  color:black;
+  font-style:italic;
+  text-align: center;
+  font-family: Times;
+  font-size: 25px;
+  border-radius: 10px;
+  display: inline-block;
+  padding: 40px;
+}
+.profile {
+  height:400px;
+  width:300px;
+  opacity:0.8;
+  border-radius: 5px;
+  float:left;
+  display:inline-block;
+}
+
+.abme {
+  margin:10px;
+  font-family: Times;
+  font-size: 20px;
+}
+
+.bio {
+  float:right;
+  display:inline-block;
+  height:400px;
+  width:600px;
+}
+
+h1 {
+  text-align: center;
+  font-family: Times;
+  color:gray;
+
+}
+
+.projectpics {
+  width:250px;
+  height:200px;
+  float:left;
+  border-radius: 5px;
+}
+
+.projectdescrip {
+  float:right;
+  height:200px;
+  width:700px;
+  font-size: 15px;
+}
+
+h2 {
+  text-align: center;
+}
+
+a {
+  color:black;
+  text-decoration: none;
+}
+
+a:hover {
+  color:lightblue;
+}
+
+.project {
+  height: 200px;
+}
+
+div {
+  margin-top:100px;
+}
+
+.break {
+  height: 100px;
+  margin-top:400px;
+}
+
+.resumetop {
+  text-align: center;
+}
+
+h3 {
+  color:lightblue;
+}
+
+.education {
+  margin-left:25px;
+}
+
+.eduindent {
+  margin-left:50px;
+}
+
+ol {
+  margin-left:75px;
+}
+
+h2 {
+  color:lightblue;
+}
+
+#break {
+  color:lightblue;
+  margin-left: -50px;
+}
+
+
+.container,
+.container * {
+	box-sizing: border-box;
+}
+.container {
+	position: relative;
+	display: inline-block;
+	overflow: hidden;
+	height: 300px;
+}
+.container img {
+	width:400px;
+}
+.container .image {
+	display: block;
+}
+.container .middle {
+	opacity: 0;
+	position: absolute;
+  margin-top:-300px;
+	width: 400px;
+	height: 300px;
+	background: rgba(0, 0, 0, 0.6);
+	color: #fff;
+	padding: 15px;
+}
+.container:hover .middle,
+.container.active .middle {
+	opacity: 1;
+}
+.container .text {
+	text-align: center;
+	font-size: 15px;
+  font-family: Times;
+	display: inline-block;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	-moz-transform: translate(-50%, -50%);
+	-webkit-transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+}
+
+table {
+  margin-left:50px;
+  width:100%;
+}
