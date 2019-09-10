@@ -56,6 +56,22 @@
   width:600px;
 }
 
+#links {
+  margin-bottom: -400px;
+  padding-left: 450px;
+}
+
+#linkedin {
+  height:65px;
+  width: 65px;
+  padding-bottom: 17px;
+}
+
+.social {
+  height: 100px;
+  width: 100px;
+}
+
 h1 {
   text-align: center;
   font-family: Times;
