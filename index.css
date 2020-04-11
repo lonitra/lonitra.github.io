@@ -1,4 +1,6 @@
-
+body {
+  margin: auto;
+}
 
 #wrapper {
   margin-left: 150px;
