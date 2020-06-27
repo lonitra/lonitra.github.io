@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+  <title> Loni Tra </title>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href ="projectdetails.css" rel = "stylesheet">
+    <link rel="icon" type="image/png" href="icon.png">
+    <!-- icon from:
+    https://www.fontspace.com/konstantine-studio/sweet-getaway-demo -->
+  </head>
+    <body>
+      <header ID="home">
+        <div class="topnav">
+          <a href="index.html#home" class="tab" ID="nav">H O M E</a>
+          <a href="index.html#projects" class="tab" ID ="nav">P R O J E C T S</a>
+          <a href="index.html#resume" class="tab" ID ="nav">R E S U M E</a>
+          <a href="index.html#photos" class="tab" ID ="nav">P H O T O S</a>
+        </div>
+      </header>
+
+
+      <br>
+      </br>
+    <div>
+      <div>
+        <span>
+          <img class="projectpics" src = "windowsforms.JPG" alt="WinForms">
+          <!-- image from https://www.infragistics.com/products/windows-forms -->
+        </span>
+        <main ID="wrapper">
+          <h1> Modernizing the WindowsForms ListView Control </h1>
+          <p>
+            The ListView control allows users to display a list of items with text (ListViewItem) and optionally
+            group them (ListViewGroup). A ListView may appear similar to the list of files in Windows File Explorer.
+            Coming onto the WindowsForms (WinForms) team, ListViewGroup had few functionality available to customers. The
+            Windows Common Controls had upgraded
+            <a href="https://docs.microsoft.com/en-us/windows/win32/api/commctrl/ns-commctrl-lvgroup" target="_blank">LVGROUP</a>
+            exposing more functionality to the ListViewGroup that would serve to be useful for the ListView control
+            as a whole. This had yet to be updated in the WinForms runtime codebase.
+            To modernize WinForms ListView control, I implemented four
+            new properties to ListViewGroup that exposes some of the functionality that was made
+            possible by the Windows Common Control update to ListViewGroup. These properties are:
+            CollapsedState, TaskLink, Subtitle, and TitleImageKey/TitleImageIndex.
+          </p>
+          <br>
+          <p>
+            <a href="https://github.com/dotnet/winforms/pull/3155" target="_blank">CollapsedState</a>
+            allows users to collapse/expand their ListViewGroups, which is immensely helpful
+            in the scenarios where there are multiple ListViewGroups with various ListViewItems assigned to each.
+            <img src="collapsedstate.gif">
+          </p>
+          <p>
+            <a href="https://github.com/dotnet/winforms/pull/3234" target="_blank">Subtitle</a>
+            now allows users to add subtitles to their ListViewGroup.
+            <img src="subtitle.png">
+          </p>
+          <p>
+            <a href="https://github.com/dotnet/winforms/pull/3293" target="_blank">TaskLink</a>
+            provides users with the ability to launch a link through a newly added event handler
+            upon clicking on the name of the task, which the user gets to set.
+            <img src="tasklink.gif">
+          </p>
+          <p>
+            <a href="https://github.com/dotnet/winforms/pull/3490" target="_blank">TitleImageKey/TitleImageIndex</a>
+            allows users to now include an icon next to their ListViewGroup headers like the red 'A'
+            that appears next to the header 'ListViewGroup'
+            <img src="titleimage.png">
+          </p>
+          <br>
+          <p>
+            Previously, I had made these implemented these properties on the runtime side of WinForms.
+            The runtime side of WinForms holds all the implementations of the various controls it offers.
+            Runtime is also an open-source project and can be contributed to
+            <a href="https://github.com/dotnet/winforms" target="_blank">here</a>.
+            WinForms also has a designer side, which holds all the logic for the designer. The
+            designer helps easily build forms through dragging and dropping different controls,
+            positioning them nicely, and changing its values. The designer auto generates code
+            as the values on the different controls change via user input so that those with little programming experience
+            can build their own windows forms apps. Please see the gif below for a visual on what I am referring to.
+            <img src="demo.gif" ID="adjust">
+          </p>
+          <p>
+            One of the issues I ran into during my internship was
+            the designer auto code generation. This is the code in the InitializeComponent method
+            that you see highlighting in the gif.
+            For the CollapsedState and TaskLink properties, generic event handlers were a part
+            of the API that did not quite come out correctly in the designer's auto generated code, ultiamtely causing errors
+            as there is nothing inside the < >.
+            <img src="codegenerror.png">
+          </p>
+          <br>
+          <p>
+            These event handlers were the first generic types to be introduced into the codebase. To remedy the errors,
+            I explored the designer side of WinForms, a whole different codebase from runtime, to include code that would properly
+            read and write generic event handlers. The designer now generates the correct code for these event handlers
+            to work properly and future event handlers that have a generic type when created through the designer.
+            <img src="codegencorrection.png">
+          </p>
+          <br>
+          <p>
+            Overall, it was extremely rewarding to be able to take my implementation on the runtime side of
+            WinForms all the way through to see it working on the designer side of WinForms.
+            This was my first software engineering internship and I learned tons. I am extremely grateful
+            to have been placed on the WinForms team where I felt so supported by my teammates
+            and was able to make an impact.
+          </p>
+        </main>
+      </div>
+      <br>
+      <footer>
+        Portions of this site &copy; 2020 Loni Tra, other attributions cited in page source
+      </footer>
+</html>
